@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eid Mubarak Animation</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Reset the page styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('https://t4.ftcdn.net/jpg/07/97/12/19/360_F_797121970_4tp9IYja2IsFYKamZCDE8ZJ5MWIc74jT.jpg'); /* Update with your Eid Mubarak background image */
+    background-size: cover;
+    background-position: center;
+    color: #70c9c9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+}
+
+.container {
+    padding: 20px;
+    max-width: 800px;
+    z-index: 10;
+}
+
+.eid-wishes {
+    font-size: 2rem;
+    font-weight: bold;
+    animation: fadeIn 3s ease-out, bounceIn 7s ease-out infinite;
+}
+
+#eid-message {
+    font-family: 'Dancing Script', cursive;
+    font-size: 5rem;
+    color: #ff6347;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    animation: textColorChange 5s infinite alternate;
+}
+
+#eid-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: rgb(228, 17, 115);
+    margin-top: 10px;
+    animation: fadeIn 5s ease-in-out;
+}
+
+#signature {
+    font-family: fantasy;
+    font-size: 2rem;
+    margin-top: 20px;
+    font-style: italic;
+    color: #e40b0b;
+    animation: slideUp 3s ease-out 1s forwards;
+}
+
+/* Animation for fading in and bouncing */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: translateY(-2000px);
+    }
+    60% {
+        transform: translateY(30px);
+    }
+    80% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Animation for color change */
+@keyframes textColorChange {
+    0% {
+        color: #ff6347;
+    }
+    50% {
+        color: #f39c12;
+    }
+    100% {
+        color: #3498db;
+    }
+}
+
+/* Animation for sliding up */
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 480px) {
+    body {
+        background-image: url('https://t4.ftcdn.net/jpg/07/97/12/19/360_F_797121970_4tp9IYja2IsFYKamZCDE8ZJ5MWIc74jT.jpg'); /* Smallest background image */
+    }
+}
+
+@media (max-width: 768px) {
+    #eid-message {
+        font-size: 3rem;
+    }
+
+    #eid-text {
+        font-size: 1.2rem;
+    }
+
+    #signature {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    #eid-message {
+        font-size: 2.5rem;
+    }
+
+    #eid-text {
+        font-size: 1rem;
+    }
+
+    #signature {
+        font-size: 0.9rem;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="eid-wishes">
+            <h1 id="eid-message">Eid Mubarak</h1>
+            <p id="eid-text">May your life be filled with joy, peace, and prosperity this Eid!</p>
+        </div>
+        <div id="signature">
+            <p>From Maryum Asif</p>
+        </div>
+    </div>
+
+    <!-- <script src="script.js"></script> -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const eidMessage = document.getElementById('eid-message');
+    setTimeout(() => {
+        eidMessage.innerHTML = "Eid Mubarak!";
+    }, 1000);
+});
+    </script>
+</body>
+</html>
